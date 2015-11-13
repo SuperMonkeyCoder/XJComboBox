@@ -98,7 +98,6 @@
         _combBoxListTableView.delegate = self;
         _combBoxListTableView.dataSource = self;
         _combBoxListTableView.frame = self.listView.bounds;
-        _combBoxListTableView.showsVerticalScrollIndicator = NO;
     }
     return _combBoxListTableView;
 }
@@ -143,7 +142,7 @@
     self.disPlayLabel.text = [NSString stringWithFormat:@"%@%@", LEFTTITLE,self.listArrayM[indexPath.row]];
     if ([self.disPlayLabel.text isEqualToString:[NSString stringWithFormat:@"%@%@",LEFTTITLE , @"请选择"]])return;
     if ([self.delegate respondsToSelector:@selector(comboBoxView:didSelectRowAtIndex:rowTitle:)]) {
-        [self.delegate comboBoxView:self didSelectRowAtIndex:indexPath.row-1 rowTitle:self.listArrayM[indexPath.row-1]];
+        [self.delegate comboBoxView:self didSelectRowAtIndex:indexPath.row-1 rowTitle:self.listArrayM[indexPath.row]];
     }
 }
 
