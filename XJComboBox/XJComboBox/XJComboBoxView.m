@@ -8,7 +8,7 @@
 
 #import "XJComboBoxView.h"
 #import "UIView+ITTAdditions.h"
-
+#define LEFTTITLE self.leftTitle?[NSString stringWithFormat:@"%@：",self.leftTitle]:@""
 @interface XJComboBoxView ()<UITableViewDelegate, UITableViewDataSource>
 
 //下拉载数据view
@@ -35,6 +35,7 @@
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tabGestureHandler)];
         [self addGestureRecognizer:tapGesture];
         [self loadComboBoxView];
+        
     }
     return self;
 }
@@ -79,6 +80,15 @@
 -(void)setBorderColor:(UIColor *)borderColor{
     _borderColor = borderColor;
     self.layer.borderColor = [borderColor CGColor];
+}
+-(void)setCornerRadius:(CGFloat)cornerRadius{
+    _cornerRadius = cornerRadius;
+    self.layer.cornerRadius = cornerRadius;
+}
+
+-(void)setLeftTitle:(NSString *)leftTitle{
+    _leftTitle = leftTitle;
+    self.disPlayLabel.text = [NSString stringWithFormat:@"%@请选择",LEFTTITLE];
 }
 
 #pragma mark - 懒加载
@@ -130,10 +140,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self comBoxBtnClick:self.comBoxBtn];
-    self.disPlayLabel.text = self.listArrayM[indexPath.row];
-    if ([self.disPlayLabel.text isEqualToString:@"请选择"])return;
+    self.disPlayLabel.text = [NSString stringWithFormat:@"%@%@", LEFTTITLE,self.listArrayM[indexPath.row]];
+    if ([self.disPlayLabel.text isEqualToString:[NSString stringWithFormat:@"%@%@",LEFTTITLE , @"请选择"]])return;
     if ([self.delegate respondsToSelector:@selector(comboBoxView:didSelectRowAtIndex:rowTitle:)]) {
-        [self.delegate comboBoxView:self didSelectRowAtIndex:indexPath.row-1 rowTitle:self.disPlayLabel.text];
+        [self.delegate comboBoxView:self didSelectRowAtIndex:indexPath.row-1 rowTitle:self.listArrayM[indexPath.row-1]];
     }
 }
 

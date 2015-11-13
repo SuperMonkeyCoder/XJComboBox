@@ -20,6 +20,8 @@
     NSArray *listArray = @[@"1",@"2",@"3",@"4",@"5",@"6"];
     XJComboBoxView *view = [[XJComboBoxView alloc]initWithFrame:CGRectMake(100, 100, 200, 35) listArray:listArray];
     view.borderColor =[UIColor redColor];
+    view.cornerRadius = 5;
+    view.leftTitle = @"描述";
     view.delegate = self;
     [self.view addSubview:view];
 }

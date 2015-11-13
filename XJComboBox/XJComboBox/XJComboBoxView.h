@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) UIColor *borderColor;
 @property (nonatomic, assign) CGFloat cornerRadius;
+
+@property (nonatomic, copy) NSString *leftTitle;
 /**
  *  初始化方法
  *
