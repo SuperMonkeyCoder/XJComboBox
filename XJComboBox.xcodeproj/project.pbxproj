@@ -39,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CEF04F601BF46AA5005ABF05 /* XJComboBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJComboBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF04F641BF46AA5005ABF05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEF04F661BF46AA5005ABF05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEF04F671BF46AA5005ABF05 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,10 +48,8 @@
 		CEF04F6F1BF46AA5005ABF05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF04F721BF46AA5005ABF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF04F741BF46AA5005ABF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEF04F791BF46AA6005ABF05 /* XJComboBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XJComboBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF04F7D1BF46AA6005ABF05 /* XJComboBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJComboBoxTests.m; sourceTree = "<group>"; };
 		CEF04F7F1BF46AA6005ABF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEF04F841BF46AA6005ABF05 /* XJComboBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XJComboBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF04F881BF46AA6005ABF05 /* XJComboBoxUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJComboBoxUITests.m; sourceTree = "<group>"; };
 		CEF04F8A1BF46AA6005ABF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEF04F971BF46AD1005ABF05 /* XJComboBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJComboBoxView.h; sourceTree = "<group>"; };
@@ -61,6 +58,9 @@
 		CEF04F9B1BF46E24005ABF05 /* UIView+ITTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ITTAdditions.m"; sourceTree = "<group>"; };
 		CEF04FA41BF471B1005ABF05 /* DownAccessory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownAccessory.png; sourceTree = "<group>"; };
 		CEF04FA51BF471B1005ABF05 /* UpAccessory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpAccessory.png; sourceTree = "<group>"; };
+		CEF202A91BFC81DE00F03DE2 /* XJComboBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJComboBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF202AA1BFC81DE00F03DE2 /* XJComboBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XJComboBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF202AB1BFC81DE00F03DE2 /* XJComboBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XJComboBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,18 +94,10 @@
 				CEF04F621BF46AA5005ABF05 /* XJComboBox */,
 				CEF04F7C1BF46AA6005ABF05 /* XJComboBoxTests */,
 				CEF04F871BF46AA6005ABF05 /* XJComboBoxUITests */,
-				CEF04F611BF46AA5005ABF05 /* Products */,
+				CEF202A91BFC81DE00F03DE2 /* XJComboBox.app */,
+				CEF202AA1BFC81DE00F03DE2 /* XJComboBoxTests.xctest */,
+				CEF202AB1BFC81DE00F03DE2 /* XJComboBoxUITests.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		CEF04F611BF46AA5005ABF05 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CEF04F601BF46AA5005ABF05 /* XJComboBox.app */,
-				CEF04F791BF46AA6005ABF05 /* XJComboBoxTests.xctest */,
-				CEF04F841BF46AA6005ABF05 /* XJComboBoxUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CEF04F621BF46AA5005ABF05 /* XJComboBox */ = {
@@ -114,10 +106,10 @@
 				CEF04F961BF46AB9005ABF05 /* XJComboBox */,
 				CEF04F661BF46AA5005ABF05 /* AppDelegate.h */,
 				CEF04F671BF46AA5005ABF05 /* AppDelegate.m */,
-				CEF04F691BF46AA5005ABF05 /* ViewController.h */,
-				CEF04F6A1BF46AA5005ABF05 /* ViewController.m */,
 				CEF04F6C1BF46AA5005ABF05 /* Main.storyboard */,
 				CEF04F6F1BF46AA5005ABF05 /* Assets.xcassets */,
+				CEF04F691BF46AA5005ABF05 /* ViewController.h */,
+				CEF04F6A1BF46AA5005ABF05 /* ViewController.m */,
 				CEF04F711BF46AA5005ABF05 /* LaunchScreen.storyboard */,
 				CEF04F741BF46AA5005ABF05 /* Info.plist */,
 				CEF04F631BF46AA5005ABF05 /* Supporting Files */,
@@ -189,7 +181,7 @@
 			);
 			name = XJComboBox;
 			productName = XJComboBox;
-			productReference = CEF04F601BF46AA5005ABF05 /* XJComboBox.app */;
+			productReference = CEF202A91BFC81DE00F03DE2 /* XJComboBox.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CEF04F781BF46AA6005ABF05 /* XJComboBoxTests */ = {
@@ -207,7 +199,7 @@
 			);
 			name = XJComboBoxTests;
 			productName = XJComboBoxTests;
-			productReference = CEF04F791BF46AA6005ABF05 /* XJComboBoxTests.xctest */;
+			productReference = CEF202AA1BFC81DE00F03DE2 /* XJComboBoxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CEF04F831BF46AA6005ABF05 /* XJComboBoxUITests */ = {
@@ -225,7 +217,7 @@
 			);
 			name = XJComboBoxUITests;
 			productName = XJComboBoxUITests;
-			productReference = CEF04F841BF46AA6005ABF05 /* XJComboBoxUITests.xctest */;
+			productReference = CEF202AB1BFC81DE00F03DE2 /* XJComboBoxUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -259,7 +251,7 @@
 				Base,
 			);
 			mainGroup = CEF04F571BF46AA5005ABF05;
-			productRefGroup = CEF04F611BF46AA5005ABF05 /* Products */;
+			productRefGroup = CEF04F571BF46AA5005ABF05;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -532,6 +524,7 @@
 				CEF04F8F1BF46AA6005ABF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEF04F901BF46AA6005ABF05 /* Build configuration list for PBXNativeTarget "XJComboBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +533,7 @@
 				CEF04F921BF46AA6005ABF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEF04F931BF46AA6005ABF05 /* Build configuration list for PBXNativeTarget "XJComboBoxUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +542,7 @@
 				CEF04F951BF46AA6005ABF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

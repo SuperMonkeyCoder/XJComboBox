@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "XJComboBoxView.h"
+#import "UIView+ITTAdditions.h"
+
 
 @interface ViewController ()<XJComboBoxViewDelegate>
 
@@ -17,16 +19,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *listArray = @[@"1",@"2",@"3",@"4",@"5",@"6"];
-    XJComboBoxView *view = [[XJComboBoxView alloc]initWithFrame:CGRectMake(100, 100, 200, 35) listArray:listArray];
-    view.borderColor =[UIColor redColor];
-    view.cornerRadius = 5;
-    view.leftTitle = @"描述";
-    view.delegate = self;
-    [self.view addSubview:view];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    NSArray *listArray =@[@{@"display":@"停止运行",@"value":@"N"},@{@"display":@"正在运行",@"value":@"Y"}];
+    XJComboBoxView *comboBox = [[XJComboBoxView alloc]initWithFrame:CGRectMake(100, 100, 250, 44)];
+    comboBox.displayMember = @"display";
+//    comboBox.valueMember = @"value";
+    comboBox.dataSource = listArray;
+    comboBox.borderColor =[UIColor redColor];
+    comboBox.cornerRadius = 5;
+    comboBox.leftTitle = @"描述";
+    comboBox.defaultTitle = @"请选择";
+    comboBox.delegate = self;
+    [self.view addSubview:comboBox];
+    
+    
 }
--(void)comboBoxView:(XJComboBoxView *)comboBoxView didSelectRowAtIndex:(NSInteger)index rowTitle:(NSString *)rowTitle{
-    NSLog(@"index = %ld, rowTitle = %@",index, rowTitle);
+
+-(void)comboBoxView:(XJComboBoxView *)comboBoxView didSelectRowAtValueMember:(NSString *)valueMember displayMember:(NSString *)displayMember{
+    NSLog(@"valueMember = %@, displayMember=%@", valueMember, displayMember);
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
